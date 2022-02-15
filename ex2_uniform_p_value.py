@@ -101,14 +101,10 @@ if __name__ == '__main__':
         if pivot is not None:
             list_pivot.append(pivot)
 
-    # print(len(list_pivot))
-    # np.savetxt("z_pivot.csv", np.array(list_pivot), delimiter=",")
-
     plt.rcParams.update({'font.size': 18})
     grid = np.linspace(0, 1, 101)
     plt.plot(grid, sm.distributions.ECDF(np.array(list_pivot))(grid), 'r-', linewidth=6, label='p-value')
     plt.plot([0, 1], [0, 1], 'k--')
     plt.legend()
     plt.tight_layout()
-    # plt.savefig('z_pivot.png', dpi=100)
     plt.show()

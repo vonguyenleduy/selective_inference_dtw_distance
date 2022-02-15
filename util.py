@@ -2,7 +2,6 @@ import numpy as np
 from mpmath import mp
 
 mp.dps = 500
-
 error_threshold = 8
 
 
